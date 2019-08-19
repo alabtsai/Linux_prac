@@ -4,9 +4,10 @@
 int * fun()
 {
  int i=0;
- static int j=0;
+ static int j=0; // has no linkage
+ // static int is stored in data segment of the program
+ // static storage are generated and initialized before execution of the program begins
  int *addr ;
- // static int is stored in heap 
  addr=&j;
 
  i=i+1;
